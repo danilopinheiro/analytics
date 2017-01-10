@@ -1,4 +1,4 @@
-<?php echo ("envia/n"); ?>
+<?php echo ("enviando... \n"); ?>
 
 <script>
 
@@ -9,6 +9,34 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-41747144-2', 'none');
 
+// enviado evento por evento
+/*
+ga('set', 'dimension3', 'run to the hills');
+ga('send', 'pageview', '/filmes.html');
+
+ga('set', 'dimension4', 'chico.bento');
+ga('send', 'pageview', '/filmes.html');
+
+ga('set', 'dimension5', '0');
+ga('send', 'pageview', '/filmes.html');
+*/
+
+// enviado info com dimensoes usando event ao inves de pages
+
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'x-men','dimension4':'danilo.pinheiro','dimension5':'0'});
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'forrest gump','dimension4':'danilo.pinheiro','dimension5':'1'});
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'breaking bad','dimension4':'danilo.pinheiro','dimension5':'1'});
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'better call saul','dimension4':'danilo.pinheiro','dimension5':'1'});
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'the others','dimension4':'danilo.pinheiro','dimension5':'0'});
+
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'run to the hill','dimension4':'chico.bento','dimension5':'0'});
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'speed racer','dimension4':'chico.bento','dimension5':'1'});
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'mortal kombat','dimension4':'chico.bento','dimension5':'1'});
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'top gear','dimension4':'chico.bento','dimension5':'1'});
+ga('send', 'event', 'Filmes', 'Clique', {'dimension3':'wild thing','dimension4':'chico.bento','dimension5':'0'});
+
+// enviando set para pagina e metodo send para apenas uma chamada
+/*
 ga('set', 'page', '/recomendador.html');
 
 ga('send','pageview',{'dimension3':'x-men','dimension4':'danilo.pinheiro','dimension5':'0'});
@@ -22,77 +50,9 @@ ga('send','pageview',{'dimension3':'forrest gump','dimension4':'everton.gago','d
 ga('send','pageview',{'dimension3':'breaking bad','dimension4':'everton.gago','dimension5':'0'});
 ga('send','pageview',{'dimension3':'os trapalhoes','dimension4':'everton.gago','dimension5':'1'});
 ga('send','pageview',{'dimension3':'as aventuras de chico bento','dimension4':'everton.gago','dimension5':'0'});
+*/
 
 /*
-ga('set', 'dimension3', 'x-men'); //ItemId
-ga('set', 'dimension4', 'danilo.pinheiro'); //UserId
-ga('set', 'dimension5', '0'); //HighLighted
-ga('send', 'pageview', 'index'); 
-
-ga('set', 'dimension3', 'forrest gump'); //ItemId
-ga('set', 'dimension4', 'danilo.pinheiro'); //UserId
-ga('set', 'dimension5', '1'); //HighLighted
-ga('send', 'pageview', 'index');
-
-ga('set', 'dimension3', 'breaking bad'); //ItemId
-ga('set', 'dimension4', 'danilo.pinheiro'); //UserId
-ga('set', 'dimension5', '1'); //HighLighted
-ga('send', 'pageview', 'index');
-
-ga('set', 'dimension3', 'better call saul'); //ItemId
-ga('set', 'dimension4', 'danilo.pinheiro'); //UserId
-ga('set', 'dimension5', '1'); //HighLighted
-ga('send', 'pageview', 'index');
-
-ga('set', 'dimension3', 'the others'); //ItemId
-ga('set', 'dimension4', 'danilo.pinheiro'); //UserId
-ga('set', 'dimension5', '0'); //HighLighted
-ga('send', 'pageview', 'index'); 
-//user:danilo.pinheiro
-
-ga('set', 'dimension3', 'x-men'); //ItemId
-ga('set', 'dimension4', 'everton.gago'); //UserId
-ga('set', 'dimension5', '0'); //HighLighted
-ga('send', 'pageview', 'index'); 
-
-ga('set', 'dimension3', 'forrest gump'); //ItemId
-ga('set', 'dimension4', 'everton.gago'); //UserId
-ga('set', 'dimension5', '1'); //HighLighted
-ga('send', 'pageview', 'index');
-
-ga('set', 'dimension3', 'breaking bad'); //ItemId
-ga('set', 'dimension4', 'everton.gago'); //UserId
-ga('set', 'dimension5', '0'); //HighLighted
-ga('send', 'pageview', 'index');
-
-ga('set', 'dimension3', 'os trapalhoes'); //ItemId
-ga('set', 'dimension4', 'everton.gago'); //UserId
-ga('set', 'dimension5', '1'); //HighLighted
-ga('send', 'pageview', 'index');
-
-ga('set', 'dimension3', 'as aventuras de chico bento'); //ItemId
-ga('set', 'dimension4', 'everton.gago'); //UserId
-ga('set', 'dimension5', '0'); //HighLighted
-ga('send', 'pageview', 'index');
-
-//user:everton.gago 
-
-/*
-ga('set', 'dimension2', 'medium');
-ga('send', 'pageview', '/level_1/');
-
-ga('set', 'dimension2', 'hard');
-ga('send', 'pageview', '/level_1/');
-
-ga('set', 'dimension2', 'medium');
-ga('send', 'pageview', '/level_4/');
-
-ga('set', 'dimension2', 'hard');
-ga('send', 'pageview', '/level_4/');
-
-/*
-ga('send', 'event', 'category', 'action', {'dimension1': 'apenas um teste'});
-
 ga('set', 'dimension2', 'easy');
 ga('send', 'pageview', '/level_1/');
 
@@ -116,4 +76,4 @@ ga('send', 'pageview', '/level_6/');
 
 </script>
 
-<?php echo ("enviado!\n"); ?>
+<?php echo ("enviado. \n"); ?>
